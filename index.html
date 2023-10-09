@@ -11,18 +11,16 @@
     <div>
         <button onclick="changeForm()">Open Form</button>
         <div class="form-popup" id="myForm">
-            <form action="" class="form-container">
-                <h1>Add A Book!</h1>
-                <label for="title"><b>Title</b></label>
-                <input type="text" id="title" placeholder="Enter Title" required>
-                <label for="author"><b>Author</b></label>
-                <input type="text" id="author" placeholder="Enter Author" required>
-                <label for="pages"><b>Page Count</b></label>
-                <input type="text" id="pages" placeholder="Enter # of Pages">
-            </form>
-            <button onclick="addBookToLibrary()" type="submit">Submit</button>
-            <button onclick="removeFromLibrary('Apple')">Remove</button>
-            <div id="confirmation"></div>
+            <div class="form-container">
+                <form action="" class="form-container">
+                    <h1>Add A Book!</h1>
+                    <input type="text" id="title" placeholder="Title" required>
+                    <input type="text" id="author" placeholder="Author" required>
+                    <input type="text" id="pages" placeholder="Pages">
+                    <button onclick="addBookToLibrary()" type="submit" class="submit-btn">Submit</button>
+                </form>
+                <div id="confirmation"></div>
+            </div> 
         </div>
     </div>
 </body>

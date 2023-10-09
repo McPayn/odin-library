@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+* {
+    font-family: 'Changa', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 24px;
+}
+
 #myForm {
     display: none;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+    padding: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+input {
+    width: 100%;
 }
