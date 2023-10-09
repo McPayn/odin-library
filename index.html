@@ -9,11 +9,20 @@
 </head>
 <body>
     <div>
-        <input type="text" id="title" placeholder="Title">
-        <input type="text" id="author" placeholder="Author">
-        <input type="text" id="pages" placeholder="# of Pages">
-        <button onclick="addBookToLibrary()" type="submit">Submit</button>
-        <div id="confirmation"></div>
+        <button onclick="changeForm()">Open Form</button>
+        <div class="form-popup" id="myForm">
+            <form action="" class="form-container">
+                <h1>Add A Book!</h1>
+                <label for="title"><b>Title</b></label>
+                <input type="text" id="title" placeholder="Enter Title" required>
+                <label for="author"><b>Author</b></label>
+                <input type="text" id="author" placeholder="Enter Author" required>
+                <label for="pages"><b>Page Count</b></label>
+                <input type="text" id="pages" placeholder="Enter # of Pages">
+            </form>
+            <button onclick="addBookToLibrary()" type="submit">Submit</button>
+            <div id="confirmation"></div>
+        </div>
     </div>
 </body>
 </html>

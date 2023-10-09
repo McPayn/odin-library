@@ -18,3 +18,12 @@ function addBookToLibrary() {
     author.value = '';
     pages.value = '';
 }
+
+function changeForm() {
+    const form = document.getElementById('myForm');
+    if (form.style.display == 'none') {
+        form.style.display = 'block';
+    } else {
+        form.style.display =  'none';
+    }
+}
