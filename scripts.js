@@ -27,3 +27,12 @@ function changeForm() {
         form.style.display =  'none';
     }
 }
+
+function removeFromLibrary(title) {
+    // title is not at top of array, title is in the object
+    // Need to figure out another way to access correct element in array
+    const index = my_library.indexOf(title);
+    console.log(index);
+    my_library.pop(my_library[index]);
+    console.log(my_library);
+}
