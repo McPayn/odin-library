@@ -47,10 +47,10 @@ h1 {
     font-size: 20px;
     border: none;
     background-color: rgb(174, 186, 240);
-    box-shadow: 0px 2px 10px #000000;
+    box-shadow: 0px 2px 5px #000000;
 }
 
-.submit-btn:hover, .book-btn:hover {
+.submit-btn:hover, .book-btn:hover, .read-button:hover {
     transform: scale(1.1);
     transition: transform .5s;
 }
@@ -60,11 +60,16 @@ h1 {
     transform: translateY(.2rem);
 }
 
+input:hover, input:focus {
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+
 input {
     width: 100%;
     border-radius: 7px;
     border: none;
-    box-shadow: 0px 2px 10px #000000;
+    box-shadow: 0px 2px 5px #000000;
     height: 30px;
     font-size: 20px;
     padding: 5px;
@@ -89,6 +94,26 @@ input {
 
 .books {
     display: grid;
-    align-items: center;
-    justify-content: center;
+    place-items: center;
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: auto;
+}
+
+.book-grid {
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px #000000;
+    background-color: #ffffff75;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.read-button {
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0px 2px 5px #000000;
+    background-color: #e462629a;
 }

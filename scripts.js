@@ -1,18 +1,45 @@
 const my_library = [];
+let count = 0;
 
-function Book(title, author, pages) {
+function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
+    this.read = read;
+}
+
+function createGrid() {
+    const container = document.querySelector('#grid-container');
+    const new_grid = document.createElement('div');
+    new_grid.innerHTML = `Title: ${my_library[count].title}<br/>Author: ${my_library[count].author}<br/>Pages: ${my_library[count].pages}<br/>`
+    new_grid.classList.add('book-grid');
+    const read_button = document.createElement('button');
+    read_button.classList.add('read-button');
+    if (my_library[count].read) {
+        read_button.innerHTML = 'Read';
+        read_button.style.backgroundColor = '#6de4629a';
+    } else {
+        read_button.innerHTML = 'Not Read';
+        read_button.style.backgroundColor = '#e462629a';
+    }
+    container.appendChild(new_grid);
+    new_grid.appendChild(read_button);
+    count++;
 }
 
 function addBookToLibrary() {
+    let read = false;
     const title = document.getElementById('title');
     const author = document.getElementById('author');
     const pages = document.getElementById('pages');
-    const new_book = new Book(title.value, author.value, pages.value);
+    if (document.getElementById('read').checked) {
+        read = true;
+    }
+    const new_book = new Book(title.value, author.value, pages.value, read);
     my_library.push(new_book);
+    createGrid();
     console.log(my_library);
+    changeForm();
 }
 
 function changeForm() {
