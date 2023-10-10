@@ -13,9 +13,13 @@ function createGrid() {
     const new_grid = document.createElement('div');
     new_grid.innerHTML = `Title: ${my_library[count].title}<br/>Author: ${my_library[count].author}<br/>Pages: ${my_library[count].pages}<br/>`
     new_grid.classList.add('book-grid');
+    new_grid.setAttribute('id', 'grid'+count);
     const read_button = document.createElement('button');
     read_button.classList.add('read-button');
     read_button.setAttribute('id', 'btn'+count);
+    const remove_button = document.createElement('button');
+    remove_button.classList.add('submit-btn');
+    remove_button.innerHTML = 'Remove';
     if (my_library[count].read) {
         read_button.innerHTML = 'Read';
         read_button.style.backgroundColor = '#6de4629a';
@@ -25,6 +29,7 @@ function createGrid() {
     }
     container.appendChild(new_grid);
     new_grid.appendChild(read_button);
+    new_grid.appendChild(remove_button);
     count++;
 }
 
