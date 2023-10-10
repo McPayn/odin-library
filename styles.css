@@ -101,7 +101,11 @@ input {
 }
 
 .book-grid {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    gap: 10px;
     height: 300px;
     width: 300px;
     border-radius: 10px;
