@@ -77,7 +77,7 @@ input {
 
 .library {
     background-color: rgb(212, 205, 205);
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     box-shadow: 0px 10px 20px #2c2b2b inset;
 }
@@ -97,6 +97,7 @@ input {
     place-items: center;
     grid-template-columns: repeat(4, 2fr);
     grid-template-rows: auto;
+    gap: 30px;
 }
 
 .book-grid {

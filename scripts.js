@@ -15,6 +15,7 @@ function createGrid() {
     new_grid.classList.add('book-grid');
     const read_button = document.createElement('button');
     read_button.classList.add('read-button');
+    read_button.setAttribute('id', 'btn'+count);
     if (my_library[count].read) {
         read_button.innerHTML = 'Read';
         read_button.style.backgroundColor = '#6de4629a';
