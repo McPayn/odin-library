@@ -12,17 +12,13 @@ function addBookToLibrary() {
     const pages = document.getElementById('pages');
     const new_book = new Book(title.value, author.value, pages.value);
     my_library.push(new_book);
-    const confirm = document.getElementById('confirmation').innerHTML = `${title.value} added!`;
     console.log(my_library);
-    title.value = '';
-    author.value = '';
-    pages.value = '';
 }
 
 function changeForm() {
     const form = document.getElementById('myForm');
     if (form.style.display == 'none') {
-        form.style.display = 'block';
+        form.style.display = 'flex';
     } else {
         form.style.display =  'none';
     }

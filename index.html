@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Library</title>
     <link rel="stylesheet" href="./styles.css">
     <script type="text/javascript" src="./scripts.js"></script>
 </head>
 <body>
-    <div>
-        <button onclick="changeForm()">Open Form</button>
-        <div class="form-popup" id="myForm">
+    <div class="container">
+        <div class="header">Library</div>
+        <div class="library">
             <div class="form-container">
-                <form action="" class="form-container">
+                <button onclick="changeForm()" class="book-btn">Add Book</button>
+                <form action="" class="form-container" id="myForm">
                     <h1>Add A Book!</h1>
                     <input type="text" id="title" placeholder="Title" required>
                     <input type="text" id="author" placeholder="Author" required>
                     <input type="text" id="pages" placeholder="Pages">
+                    <div class="read-book">
+                        <input type="checkbox" name="read" id="read" class="checkbox">
+                        <label for="read">Have you read this book?</label>
+                    </div>
                     <button onclick="addBookToLibrary()" type="submit" class="submit-btn">Submit</button>
                 </form>
-                <div id="confirmation"></div>
-            </div> 
+            </div>
+            <div class="books">
+            </div>
         </div>
     </div>
 </body>
